@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HeroSectionComponent } from './sections/hero/hero-section.component';
+import { AboutSectionComponent } from './sections/about/about-section.component';
+import { EducationSectionComponent } from './sections/education/education-section.component';
+import { ExperienceSectionComponent } from './sections/experience/experience-section.component';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [HeroSectionComponent, AboutSectionComponent, EducationSectionComponent, ExperienceSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
