@@ -1,0 +1,27 @@
+@import '../sections.styles.scss';
+
+section {
+  .content-container {
+    h1 {
+      margin-left: 2.2rem;
+    }
+    .text-container {
+      h2 {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    max-width: 90%;
+
+    .content-container {
+      h1 {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+    }
+  }
+}

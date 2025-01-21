@@ -1,0 +1,63 @@
+@import '../sections.styles.scss';
+
+section {
+  h1 {
+    margin-left: 0.22rem;
+  }
+  .content-container {
+    .text-container {
+      .publix-lg {
+        display: inline-block;
+      }
+    
+      .publix-sm {
+        display: none;
+      }
+    }
+    .image-container {
+      #Publix {
+        height: 10rem;
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: 2px 3px 5px -5px;
+        margin-top: 1rem;
+        object-fit: cover;
+        object-position: right;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    .content-container {
+      h1 {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+      .text-container {
+        .publix-lg {
+          display: none;
+        }
+        .publix-sm {
+          text-align: center;
+          width: 100%;
+          display: inline-block;
+        }
+        .image-container {
+          text-align: center;
+          #Publix {
+            text-align: center;
+            height: 10rem;
+            width: 287px;
+            border-radius: 5px;
+            box-shadow: 2px 3px 5px -5px;
+            margin-top: 1rem;
+            object-fit: cover;
+            object-position: right;
+          }
+        }
+      }
+    }
+  }
+}

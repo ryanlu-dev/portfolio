@@ -1,3 +1,18 @@
-h1 {
-  color: red;
+section {
+  margin-top: -5rem;
+  margin-bottom: -2rem;
+  text-align: center;
+  font-family: 'Tomorrow';
+  h1 {
+    font-size: 6rem;
+    margin-bottom: 0px;
+  }
+  h2 {
+    font-size: 4rem;
+    margin-top: 0px;
+  }
+  width: 100%;
+}
+hr {
+  width: 90%;
 }
