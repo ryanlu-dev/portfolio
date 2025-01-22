@@ -15,6 +15,12 @@ section {
       }
     }
     .text-container {
+      .title-lg {
+        display: block;
+      }
+      .title-sm {
+        display: none;
+      }
       h2 {
         margin-bottom: 1.5rem;
       }
@@ -35,6 +41,14 @@ section {
         .blurb {
           margin-bottom: 0rem;
           max-width: 100%;
+        }
+      }
+      .text-container {
+        .title-sm {
+          display: block;
+        }
+        .title-lg {
+          display: none;
         }
       }
     }

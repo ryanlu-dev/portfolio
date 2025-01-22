@@ -23,6 +23,12 @@ section {
       }
     }
     .text-container {
+      .uni-sm {
+        display: none;
+      }
+      .uni-lg {
+        display: block;
+      }
       .image-container {
         text-align: center;
         #UF-sm {
@@ -64,6 +70,12 @@ section {
         }
       }
       .text-container{
+        .uni-sm {
+          display: block;
+        }
+        .uni-lg {
+          display: none;
+        }
         .image-container {
           #UF-sm {
             margin: auto;
