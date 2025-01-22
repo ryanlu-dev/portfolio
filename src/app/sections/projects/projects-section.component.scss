@@ -1,9 +1,18 @@
-@import '../sections.styles.scss';
+@use '../sections.styles.scss';
 
 section {
   .content-container {
-    h1 {
-      margin-left: 2.2rem;
+    .left-container {
+      h1 {
+        margin-left: 2.2rem;
+      }
+      .blurb {
+        max-width: 10rem;
+        margin-top: 0.5rem;
+        a {
+          color: orangered;
+        }
+      }
     }
     .text-container {
       h2 {
@@ -18,9 +27,15 @@ section {
     max-width: 90%;
 
     .content-container {
-      h1 {
-        margin-left: 0px;
-        margin-right: 0px;
+      .left-container{
+        h1 {
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+        .blurb {
+          margin-bottom: 0rem;
+          max-width: 100%;
+        }
       }
     }
   }
