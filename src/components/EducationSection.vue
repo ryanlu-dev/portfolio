@@ -1,153 +1,98 @@
 <template>
   <section>
-    <div class="content-container">
-      <div class="left-container">
-        <h1>Education</h1>
-        <div class="image-container">
-          <img id="UF-lg" src="/GatorHead.png" alt="A picture of the University of Florida Gator logo">
+    <div class="section-inner">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-card">
+        <div class="edu-header">
+          <img src="/GatorHead.png" alt="University of Florida logo" class="school-logo">
+          <div class="school-info">
+            <h3 class="school-name">University of Florida</h3>
+            <p class="degree">B.S. Computer Science · Minor in Music Performance</p>
+            <p class="meta">2020 – 2024 · Cum Laude · 3.71 GPA</p>
+          </div>
+          <img src="/DrumMajor.jpg" alt="Ryan conducting the UF Marching Band" class="drum-major">
         </div>
-      </div>
-      <div class="text-container">
-        <h2 class="uni-lg">
-          <b>University of Florida (2020 - 2024)</b>
-        </h2>
-        <h2 class="uni-sm">
-          <b>University of Florida<br>(2020 - 2024)</b>
-        </h2>
-        <div class="image-container">
-          <img id="UF-sm" src="/GatorHead.png" alt="A picture of the University of Florida Gator logo">
+        <div class="edu-body">
+          <p>I graduated with a Bachelor of Science in Computer Science and a minor in Music Performance. Standout courses include Data Structures and Algorithms, Operating Systems, Computer Networking, and Software Engineering.</p>
+          <p>In fall semesters, I performed with the UF Pride of the Sunshine Marching Band — first as baritone section leader, then as drum major for the entire ensemble. In spring, I played euphonium in the UF Symphonic and Concert Band.</p>
+          <p>In Fall 2021, I was initiated into the Alpha Eta Chapter of Kappa Kappa Psi, National Honorary Band Service Fraternity. I served as chapter webmaster for several semesters and sat on multiple committees supporting the band program.</p>
         </div>
-        <p>
-          I graduated cum laude (3.71 GPA) with a Bachelor of Science in Computer Science and a minor in Music Performance. Some standout courses I had taken include Data Structures and Algorithms, Operating Systems, Computer Networking, and Software Engineering.
-        </p>
-        <p>
-          In fall semesters, I performed with the UF Pride of the Sunshine Marching Band. I served as a section leader for the baritones and later became a drum major for the entire ensemble. In the spring, I was a member of the UF Symphonic Band or Concert Band and played the euphonium.
-        </p>
-        <p>
-          In Fall 2021, I was initiated into the Alpha Eta Chapter of Kappa Kappa Psi, National Honorary Band Service Fraternity. I was an active member for every semester until I graduated. I served as the chapter's webmaster for several semesters and sat on multiple committees to serve the band program at UF.
-        </p>
-      </div>
-      <div class="image-container">
-        <img id="DrumMajor" src="/DrumMajor.jpg" alt="A picture of me conducting the UF Pride of the Sunshine Marching Band">
       </div>
     </div>
   </section>
 </template>
 
 <style scoped lang="scss">
-section {
-  .content-container {
-    .left-container {
-      width: 184px;
-
-      h1 {
-        text-align: left;
-        margin-left: 1rem;
-        width: 99px;
-      }
-
-      .image-container {
-        text-align: center;
-
-        #UF-lg {
-          margin: auto;
-          display: flex;
-          height: 50%;
-          width: 99px;
-          border-radius: 5px;
-          margin-top: 2.2rem;
-          object-fit: cover;
-        }
-      }
-    }
-
-    .text-container {
-      .uni-sm {
-        display: none;
-      }
-
-      .uni-lg {
-        display: block;
-      }
-
-      .image-container {
-        text-align: center;
-
-        #UF-sm {
-          display: none;
-        }
-      }
-    }
-
-    .image-container {
-      #DrumMajor {
-        object-fit: cover;
-        width: 9rem;
-        height: 10rem;
-        border-radius: 5px;
-        box-shadow: 2px 3px 5px -5px;
-        object-position: 30%;
-        margin-top: 10rem;
-      }
-    }
-  }
+.edu-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background-color 0.25s, border-color 0.25s;
 }
 
-@media only screen and (max-width: 768px) {
-  section {
-    .content-container {
-      h1 {
-        margin-left: 0px;
-        margin-right: 0px;
-      }
+.edu-header {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.25s;
+}
 
-      .left-container {
-        h1 {
-          text-align: center;
-          margin-left: 0rem;
-          width: 100%;
-        }
+.school-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 
-        .image-container {
-          #UF-lg {
-            display: none;
-          }
-        }
-      }
+.school-info {
+  flex: 1;
+  min-width: 0;
+}
 
-      .text-container {
-        .uni-sm {
-          display: block;
-        }
+.school-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.2rem;
+  transition: color 0.25s;
+}
 
-        .uni-lg {
-          display: none;
-        }
+.degree {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0 0 0.15rem;
+  transition: color 0.25s;
+}
 
-        .image-container {
-          #UF-sm {
-            margin: auto;
-            display: flex;
-            height: 30%;
-            width: 50%;
-            border-radius: 5px;
-            margin-top: 1rem;
-          }
-        }
-      }
+.meta {
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin: 0;
+  font-weight: 500;
+  transition: color 0.25s;
+}
 
-      .image-container {
-        #DrumMajor {
-          object-fit: cover;
-          width: 90%;
-          height: 100%;
-          border-radius: 5px;
-          box-shadow: 2px 3px 5px -5px;
-          object-position: 30%;
-          margin-top: 0rem;
-        }
-      }
-    }
-  }
+.drum-major {
+  width: 60px;
+  height: 78px;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  transition: border-color 0.25s;
+}
+
+.edu-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .drum-major { display: none; }
+
+  .edu-header { flex-wrap: wrap; }
 }
 </style>

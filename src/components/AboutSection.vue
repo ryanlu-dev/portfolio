@@ -1,125 +1,109 @@
 <template>
   <section>
-    <div class="content-container">
-      <div class="left-container">
-        <h1>About Me</h1>
-        <div class="image-container">
+    <div class="section-inner">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-layout">
+        <div class="about-photos">
           <img id="Ryan" src="/Ryan.jpg" alt="A picture of Ryan Lu">
+          <img id="MJ" src="/MJ.jpg" alt="Ryan's cat, MJ">
         </div>
-      </div>
-      <div class="text-container">
-        <p>Hi, I'm Ryan. I love programming, gaming, music, and my cat!</p>
-        <p>I'm experienced in C++, Java, C#, Python, React, Vue, and more — I love learning about new languages and frameworks. My main goal as a software engineer is to contribute to a project and team where I'm truly valued and I know I'm doing impactful work.</p>
-        <p>I have many years of experience as a leader in my time performing in marching bands and within service organizations, which I believe sets me apart as someone who understands what it means to work in a team and how to communicate effectively.</p>
-        <p>
-          I'm always looking for new opportunities to learn and grow as a developer and as a person. Feel free to reach out to me via email at
-          <span
-            class="tooltip-trigger"
-            data-tooltip="I do this so I don't get spam from robots!"
-          >"(my first name) [at] (my full name) [dot] dev"</span>
-          or <a href="https://www.linkedin.com/in/-ryan-lu-" style="color: orangered">connect with me on LinkedIn!</a>
-        </p>
-      </div>
-      <div class="image-container">
-        <img id="MJ" src="/MJ.jpg" alt="A picture of Ryan's cat, MJ!">
+        <div class="about-text">
+          <p>Hi, I'm Ryan. I love programming, gaming, music, and my cat!</p>
+          <p>I'm experienced in C++, Java, C#, Python, React, Vue, and more — I love learning about new languages and frameworks. My main goal as a software engineer is to contribute to a project and team where I'm truly valued and I know I'm doing impactful work.</p>
+          <p>I have many years of experience as a leader in my time performing in marching bands and within service organizations, which I believe sets me apart as someone who understands what it means to work in a team and how to communicate effectively.</p>
+          <p>
+            I'm always looking for new opportunities to learn and grow. Feel free to reach out via email at
+            <span class="tooltip-trigger" data-tooltip="I do this so I don't get spam from robots!">
+              "(my first name) [at] (my full name) [dot] dev"
+            </span>
+            or <a href="https://www.linkedin.com/in/-ryan-lu-">connect with me on LinkedIn.</a>
+          </p>
+        </div>
       </div>
     </div>
   </section>
-  <hr>
 </template>
 
 <style scoped lang="scss">
-section {
-  .content-container {
-    h1 {
-      margin-left: 1.5rem;
-    }
+.about-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
 
-    .image-container {
-      #Ryan {
-        height: 15rem;
-        width: 7rem;
-        border-radius: 5px;
-        box-shadow: 2px 3px 5px -5px;
-        margin-top: 1.5rem;
-        object-fit: cover;
-        margin-left: -1rem;
-      }
+.about-photos {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
 
-      #MJ {
-        height: 10rem;
-        width: 11rem;
-        border-radius: 5px;
-        box-shadow: 2px 3px 5px -5px;
-        vertical-align: middle;
-        margin-top: 50%;
-        margin-right: -1rem;
-        object-fit: cover;
-      }
-    }
+  img {
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    display: block;
+    transition: border-color 0.25s;
   }
 
-  .tooltip-trigger {
-    position: relative;
-    cursor: help;
-    text-decoration: underline dotted orangered;
+  #Ryan {
+    width: 120px;
+    height: 168px;
+  }
 
-    &::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      bottom: calc(100% + 0.4rem);
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #2F314A;
-      color: #EDF2F4;
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-      border: 1px solid orangered;
-      white-space: nowrap;
-      font-size: 0.85rem;
-      font-weight: 400;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.15s;
-      z-index: 10;
-    }
-
-    &:hover::after {
-      opacity: 1;
-    }
+  #MJ {
+    width: 120px;
+    height: 100px;
   }
 }
 
-@media only screen and (max-width: 768px) {
-  section {
-    .content-container {
-      h1 {
-        margin-left: 0px;
-      }
+.about-text {
+  flex: 1;
+  min-width: 0;
+}
 
-      .image-container {
-        #Ryan {
-          height: 20rem;
-          width: 15rem;
-          max-width: 95%;
-          border-radius: 5px;
-          box-shadow: 2px 3px 5px -5px;
-          margin-top: 1.5rem;
-          object-fit: cover;
-        }
+.tooltip-trigger {
+  position: relative;
+  cursor: help;
+  color: var(--accent-warm);
+  text-decoration: underline dotted;
+  text-decoration-color: var(--accent-warm);
+  transition: color 0.15s;
 
-        #MJ {
-          height: 20rem;
-          width: 22rem;
-          max-width: 95%;
-          border-radius: 5px;
-          box-shadow: 2px 3px 5px -5px;
-          vertical-align: middle;
-          margin-top: 0.5rem;
-          margin-right: 0rem;
-          object-fit: cover;
-        }
-      }
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--accent-warm);
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+    z-index: 10;
+  }
+
+  &:hover::after { opacity: 1; }
+}
+
+@media (max-width: 560px) {
+  .about-layout {
+    flex-direction: column;
+  }
+
+  .about-photos {
+    flex-direction: row;
+    width: 100%;
+
+    img {
+      flex: 1;
+      width: 0;
+      height: 130px;
     }
   }
 }

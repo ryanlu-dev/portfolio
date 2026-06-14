@@ -1,30 +1,32 @@
 <template>
   <section>
     <h1>Ryan Lu</h1>
-    <h2>Developer</h2>
+    <p class="subtitle">Developer</p>
   </section>
-  <hr>
 </template>
 
 <style scoped lang="scss">
 section {
-  margin-top: -5rem;
-  margin-bottom: -2rem;
   text-align: center;
-  font-family: 'Tomorrow';
-  width: 100%;
+  padding: 2.75rem 1rem 1.5rem;
 
   h1 {
-    font-size: 6rem;
-    margin-bottom: 0px;
+    font-family: 'Tomorrow', sans-serif;
+    font-size: clamp(3rem, 10vw, 5.5rem);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 0.35rem;
+    transition: color 0.25s;
   }
-  h2 {
-    font-size: 4rem;
-    margin-top: 0px;
-  }
-}
 
-hr {
-  width: 90%;
+  .subtitle {
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
+    color: var(--text-muted);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 300;
+    transition: color 0.25s;
+  }
 }
 </style>

@@ -1,101 +1,63 @@
 <template>
   <section>
-    <div class="content-container">
-      <h1>Experience</h1>
-      <div class="text-container">
-        <h2 class="publix-lg">
-          Publix Technology - Software Engineering Intern (2024)
-        </h2>
-        <h2 class="publix-sm">
-          Publix Technology<br>Software Engineering Intern (2024)
-        </h2>
-        <div class="image-container">
-          <img id="Publix" src="/PTechBanner.jpg" alt="A graphic of Publix Technology which contains a man shopping in a grocery store aisle.">
+    <div class="section-inner">
+      <h2 class="section-title">Experience</h2>
+      <div class="job-card">
+        <img src="/PTechBanner.jpg" alt="Publix Technology banner" class="banner">
+        <div class="card-body">
+          <div class="job-header">
+            <div>
+              <h3 class="company">Publix Technology</h3>
+              <p class="role">Software Engineering Intern · Summer 2024</p>
+            </div>
+          </div>
+          <p>As a software engineering intern for Publix Technology, I worked as a developer on the Publix Property Portal (P3), a web application that allows Publix employees and tenants to view and manage their property.</p>
+          <p>I worked on the front end and back end hosted on Microsoft Azure and maintained through Azure DevOps. I accomplished several features and bug fixes for the web app, built using C#/ASP.NET MVC with Kendo, Bootstrap, and jQuery.</p>
+          <p>I was a primary developer of a feature released to production — I added a function to the lease compliance control panel to rename file attachments, requiring front-end work to add the button and back-end logic to update the file name as an Azure Storage Blob.</p>
+          <p>I worked in an agile environment over a 3-month sprint cycle, collaborating with developers, business analysts, and project managers. At the intern showcase I presented my work and received very favorable feedback from cohort leaders.</p>
         </div>
-        <p>
-          As a software engineering intern for Publix Technology, I worked as a developer on the Publix Property Portal (P3), which is a web application that allows Publix employees and tenants to view and manage their property.
-        </p>
-        <p>
-          I worked on the front end and back end which was hosted on Microsoft Azure and maintained through Azure DevOps. I accomplished several features and bug fixes for the web app, which was built using C#/ASP.NET MVC and used frameworks and libraries such as Kendo, Bootstrap, and jQuery.
-        </p>
-        <p>
-          I was a primary developer of a feature that was released to production and used by Publix employees and tenants. I added a function to the existing lease compliance control panel to rename file attachments, which required me to use front-end knowledge to add the button and manipulate the file name to then send to the back end to update the name of the file as an Azure Storage Blob.
-        </p>
-        <p>
-          I interned for a period of 3 months, which was the duration of a sprint cycle. I worked in an agile environment and collaborated with a team of developers, business analysts, and project managers. I also had the opportunity to present my work to several teams and receive feedback. At the end of the internship, I presented my work to my cohort and leaders in attendance at the intern showcase, where I received very favorable feedback.
-        </p>
       </div>
     </div>
   </section>
-  <hr>
 </template>
 
 <style scoped lang="scss">
-section {
-  h1 {
-    margin-left: 0.22rem;
-  }
-
-  .content-container {
-    .text-container {
-      .publix-lg {
-        display: inline-block;
-      }
-
-      .publix-sm {
-        display: none;
-      }
-    }
-
-    .image-container {
-      #Publix {
-        height: 10rem;
-        width: 100%;
-        border-radius: 5px;
-        box-shadow: 2px 3px 5px -5px;
-        margin-top: 1rem;
-        object-fit: cover;
-        object-position: right;
-      }
-    }
-  }
+.job-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background-color 0.25s, border-color 0.25s;
 }
 
-@media only screen and (max-width: 768px) {
-  section {
-    .content-container {
-      h1 {
-        margin-left: 0px;
-        margin-right: 0px;
-      }
+.banner {
+  width: 100%;
+  height: 8rem;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
 
-      .text-container {
-        .publix-lg {
-          display: none;
-        }
+.card-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
 
-        .publix-sm {
-          text-align: center;
-          width: 100%;
-          display: inline-block;
-        }
+.job-header {
+  margin-bottom: 1.1rem;
+}
 
-        .image-container {
-          text-align: center;
+.company {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.2rem;
+  transition: color 0.25s;
+}
 
-          #Publix {
-            text-align: center;
-            height: 10rem;
-            width: 287px;
-            border-radius: 5px;
-            box-shadow: 2px 3px 5px -5px;
-            margin-top: 1rem;
-            object-fit: cover;
-            object-position: right;
-          }
-        }
-      }
-    }
-  }
+.role {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  transition: color 0.25s;
 }
 </style>

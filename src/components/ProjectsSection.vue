@@ -1,51 +1,47 @@
 <template>
   <section>
-    <div class="content-container">
-      <div class="left-container">
-        <h1>Projects</h1>
-        <div class="blurb">
-          <a href="https://github.com/ryanlu-dev">(Find these (including this portfolio) on my GitHub!)</a>
+    <div class="section-inner">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3 class="project-name">UF Course Planner</h3>
+          <span class="project-date">Sep – Dec 2024</span>
         </div>
+        <Carousel :autoplay="2000" :wrap-around="true" :pause-autoplay-on-hover="true" class="carousel">
+          <Slide v-for="(img, i) in UFCoursePlannerImages" :key="i">
+            <div class="slide-inner">
+              <img :src="img.image" :alt="img.title">
+            </div>
+          </Slide>
+          <template #addons><Navigation /></template>
+        </Carousel>
+        <p>I was scrum master and developer for the UF Course Planner, my senior design project. The app provides students a one-stop shop to manage courses and auto-schedule semesters based on degree plans, credits completed, and desired courseload.</p>
+        <p>Built with React and Microsoft Azure — Azure Static Web Apps, Microsoft Entra for auth, Azure Functions, and PostgreSQL — with three other students. My first time using React in a team setting; we received full marks for our presentation and encouragement from faculty to continue the project under a university grant.</p>
       </div>
-      <div class="text-container">
-        <div class="project">
-          <h2 class="title-lg">UF Course Planner (09/24 - 12/24)</h2>
-          <h2 class="title-sm">UF Course Planner<br>(09/24 - 12/24)</h2>
-          <Carousel :autoplay="2000" :wrap-around="true" :pause-autoplay-on-hover="true" class="carousel">
-            <Slide v-for="(img, i) in UFCoursePlannerImages" :key="i">
-              <div class="slide-inner">
-                <img :src="img.image" :alt="img.title">
-              </div>
-            </Slide>
-            <template #addons>
-              <Navigation />
-            </template>
-          </Carousel>
-          <p>I was a scrum master and developer for the UF Course Planner, which served as my senior design project. The purpose of the project is to provide students with a one-stop app to manage their courses and have the application schedule courses for the semester according to provided degree plans and factors like what courses have already been taken and how many credits the user wishes to take.</p>
-          <p>I collaborated with 3 other students to deploy a React web application using Microsoft Azure's services, including Azure Static Web Apps, user authentication through Microsoft Entra, Azure Functions, and PostgreSQL. This was my first time using React outside of personal practice, and I found it to be a useful way of developing components to work on parts of a project alongside other developers.</p>
-          <p>We received full marks for our presentation and demonstration and had even received encouragement from faculty to continue or adapt this project under a grant through the university. It was a very valuable learning experience for me, as it was a project that felt completely within the hands of my group, and we did not receive much structure or guidance.</p>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3 class="project-name">Thought Bubbles</h3>
+          <span class="project-date">Jan – Apr 2024</span>
         </div>
-        <div class="project">
-          <h2 class="title-lg">Thought Bubbles (01/24 - 04/24)</h2>
-          <h2 class="title-sm">Thought Bubbles<br>(01/24 - 04/24)</h2>
-          <Carousel :autoplay="2000" :wrap-around="true" :pause-autoplay-on-hover="true" class="carousel">
-            <Slide v-for="(img, i) in ThoughtBubblesImages" :key="i">
-              <div class="slide-inner">
-                <img :src="img.image" :alt="img.title">
-              </div>
-            </Slide>
-            <template #addons>
-              <Navigation />
-            </template>
-          </Carousel>
-          <p>I was the team leader and a developer for Thought Bubbles, which served as the final project for one of my courses. The app is meant to facilitate discussions within classrooms by posing a question on the screen and collecting responses to display and reply to on the screen.</p>
-          <p>I worked with 4 other students to host an application on UF's servers based on a Linux, Apache, MySQL, and PHP (LAMP) stack. We used Figma for prototyping purposes, which let us create the front end through Bootstrap and jQuery easily.</p>
-          <p>We received favorable reviews at the end-of-semester showcase, and our professor had remarked that it was a tool that he could see himself actually using! This project was fun to work through limitations on what we could host on UF's servers.</p>
-        </div>
+        <Carousel :autoplay="2000" :wrap-around="true" :pause-autoplay-on-hover="true" class="carousel">
+          <Slide v-for="(img, i) in ThoughtBubblesImages" :key="i">
+            <div class="slide-inner">
+              <img :src="img.image" :alt="img.title">
+            </div>
+          </Slide>
+          <template #addons><Navigation /></template>
+        </Carousel>
+        <p>Team leader and developer for Thought Bubbles, a classroom discussion tool that poses a question on screen and collects, displays, and allows replies to student responses in real time.</p>
+        <p>Built on a LAMP stack (Linux, Apache, MySQL, PHP) hosted on UF servers with four other students, prototyped in Figma, and styled with Bootstrap and jQuery. Our professor remarked it was a tool he could see himself actually using.</p>
       </div>
+
+      <p class="github-link">
+        <a href="https://github.com/ryanlu-dev">Find these projects (including this portfolio) on my GitHub →</a>
+      </p>
     </div>
   </section>
-  <hr>
 </template>
 
 <script setup lang="ts">
@@ -58,73 +54,75 @@ interface SlideImage {
 }
 
 const UFCoursePlannerImages: SlideImage[] = [
-  { image: '/UFCoursePlanner/SplashScreen.png', title: 'Splash Screen of UF Course Planner' },
-  { image: '/UFCoursePlanner/Dashboard.png', title: "Dashboard showing courses added to user's schedule" },
-  { image: '/UFCoursePlanner/Schedule.png', title: "User's schedule shown in weekly layout" },
-  { image: '/UFCoursePlanner/SectionSearch.png', title: 'Section search screen' },
-  { image: '/UFCoursePlanner/DegreePlan.png', title: "Degree plan screen for user's selected major" },
-  { image: '/UFCoursePlanner/Profile.png', title: "User's profile screen with selections for major, courseload, and graduation date" },
+  { image: '/UFCoursePlanner/SplashScreen.png', title: 'Splash Screen' },
+  { image: '/UFCoursePlanner/Dashboard.png', title: 'Dashboard' },
+  { image: '/UFCoursePlanner/Schedule.png', title: 'Weekly Schedule' },
+  { image: '/UFCoursePlanner/SectionSearch.png', title: 'Section Search' },
+  { image: '/UFCoursePlanner/DegreePlan.png', title: 'Degree Plan' },
+  { image: '/UFCoursePlanner/Profile.png', title: 'User Profile' },
 ]
 
 const ThoughtBubblesImages: SlideImage[] = [
-  { image: '/ThoughtBubbles/SplashScreen.png', title: 'Splash Screen of Thought Bubbles' },
-  { image: '/ThoughtBubbles/CreateRoom.png', title: 'Creating a room in Thought Bubbles' },
-  { image: '/ThoughtBubbles/TeacherView.png', title: 'Teacher View of Thought Bubbles - ask a question here!' },
-  { image: '/ThoughtBubbles/Submitted.png', title: 'A submitted answer in Thought Bubbles' },
+  { image: '/ThoughtBubbles/SplashScreen.png', title: 'Splash Screen' },
+  { image: '/ThoughtBubbles/CreateRoom.png', title: 'Create Room' },
+  { image: '/ThoughtBubbles/TeacherView.png', title: 'Teacher View' },
+  { image: '/ThoughtBubbles/Submitted.png', title: 'Submitted Answer' },
 ]
 </script>
 
 <style scoped lang="scss">
-section {
-  .content-container {
-    .left-container {
-      h1 {
-        margin-left: 2.2rem;
-      }
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem 1.5rem;
+  margin-bottom: 1.25rem;
+  transition: background-color 0.25s, border-color 0.25s;
+}
 
-      .blurb {
-        max-width: 10rem;
-        margin-top: 0.5rem;
+.project-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
 
-        a {
-          color: orangered;
-        }
-      }
-    }
+.project-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  transition: color 0.25s;
+}
 
-    .text-container {
-      .title-lg {
-        display: block;
-      }
-
-      .title-sm {
-        display: none;
-      }
-
-      h2 {
-        margin-bottom: 1.5rem;
-      }
-    }
-  }
+.project-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: color 0.25s;
 }
 
 .carousel {
-  width: 400px;
-  max-width: 100%;
-  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 1.25rem;
+  border-radius: 8px;
+  overflow: hidden;
 
   .slide-inner {
-    width: 400px;
-    height: 400px;
-    max-width: 100%;
+    width: 100%;
+    height: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    background-color: var(--bg-alt);
+    transition: background-color 0.25s;
 
     img {
-      width: 100%;
-      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
     }
   }
@@ -132,37 +130,15 @@ section {
 
 :deep(.carousel__prev),
 :deep(.carousel__next) {
-  color: #EDF2F4;
-  background-color: rgba(0, 0, 0, 0.4);
+  color: var(--text);
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
+  &:hover { background-color: rgba(0, 0, 0, 0.6); }
 }
 
-@media only screen and (max-width: 768px) {
-  section {
-    max-width: 90%;
-
-    .content-container {
-      .left-container {
-        h1 {
-          margin-left: 0px;
-          margin-right: 0px;
-        }
-
-        .blurb {
-          margin-bottom: 0rem;
-          max-width: 100%;
-        }
-      }
-
-      .text-container {
-        .title-sm {
-          display: block;
-        }
-
-        .title-lg {
-          display: none;
-        }
-      }
-    }
-  }
+.github-link {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
 }
 </style>
