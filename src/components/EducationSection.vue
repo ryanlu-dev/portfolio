@@ -19,6 +19,15 @@
           <p>In Fall 2021, I was initiated into the Alpha Eta Chapter of Kappa Kappa Psi, National Honorary Band Service Fraternity. I served as chapter webmaster for several semesters and sat on multiple committees supporting the chapter and band programs at UF. I was an active member for several semesters and was elected to be the chapter's delegate for the 2024 Southeastern Convention.</p>
         </div>
       </div>
+      <div class="irsc-card">
+        <div class="edu-header">
+          <div class="school-info" style="text-align: left;">
+            <h3 class="school-name">Indian River State College</h3>
+            <p class="degree">A.A. · General Studies</p>
+            <p class="meta">2018 – 2020</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -88,6 +97,19 @@
   padding: 1.25rem 1.5rem 1.5rem;
 }
 
+.irsc-card {
+  margin-top: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background-color 0.25s, border-color 0.25s;
+
+  .edu-header {
+    border-bottom: none;
+  }
+}
+
 @media (max-width: 640px) {
   .drum-major {
     height: 220px;
@@ -95,6 +117,26 @@
   .school-logo {
     max-width: 70px;
     max-height: 70px;
+  }
+}
+
+@media (max-width: 420px) {
+  .drum-major {
+    height: 180px;
+  }
+  .school-logo {
+    max-width: 48px;
+    max-height: 48px;
+  }
+  .edu-header {
+    gap: 0.6rem;
+    padding: 1rem;
+  }
+  .school-name {
+    font-size: 0.95rem;
+  }
+  .degree {
+    font-size: 0.8rem;
   }
 }
 </style>

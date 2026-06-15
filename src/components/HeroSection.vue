@@ -1,7 +1,7 @@
 <template>
   <section>
     <h1>Ryan Lu</h1>
-    <p class="subtitle">Developer</p>
+    <p class="subtitle">Associate Software Engineer</p>
   </section>
 </template>
 

@@ -126,6 +126,12 @@ const ThoughtBubblesImages: SlideImage[] = [
       object-fit: contain;
     }
   }
+
+  @media (max-width: 480px) {
+    .slide-inner {
+      height: 200px;
+    }
+  }
 }
 
 :deep(.carousel__prev),

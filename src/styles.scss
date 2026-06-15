@@ -72,6 +72,10 @@ p {
   margin: 0 auto;
   padding: 2.5rem 1.5rem;
   width: 100%;
+
+  @media (max-width: 480px) {
+    padding: 1.5rem 1rem;
+  }
 }
 
 .section-title {

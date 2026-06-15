@@ -143,4 +143,20 @@ nav {
 main {
   flex: 1;
 }
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0 0.75rem;
+
+    .tabs {
+      gap: 0;
+    }
+
+    button {
+      font-size: 0.75rem;
+      padding: 0.4rem 0.5rem;
+      letter-spacing: 0;
+    }
+  }
+}
 </style>

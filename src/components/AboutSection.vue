@@ -9,8 +9,8 @@
         </div>
         <div class="about-text">
           <p>Hi, I'm Ryan. I love programming, gaming, music, and my cat!</p>
-          <p>I'm experienced in C#, .NET, JavaScript, Java, C++, Python, React, Vue, and more — I love learning about new languages and frameworks. My main goal as a software engineer is to contribute to a project and team where I'm truly valued and I know I'm doing impactful work.</p>
-          <p>I have many years of experience as a leader in my time performing in marching bands and within service organizations, which I believe sets me apart as someone who understands what it means to work in a team and how to communicate effectively.</p>
+          <p>I'm currently an Associate Software Engineer at Infotech Inc., working on the Enterprise team for AASHTOWare Project. I'm comfortable with C#, ASP.NET, JavaScript, SQL, Java, C++, Python, React, Vue, and more — and I'm always looking to expand further. My goal is to contribute to a project and team where I'm truly valued and doing impactful work.</p>
+          <p>I have years of experience as a leader through performing in marching bands and serving in organizations, which gives me a unique understanding of effective collaboration and what it takes to achieve great things together.</p>
           <p>
             I'm always looking for new opportunities to learn and grow. Feel free to reach out via
             <a ref="emailRef" class="email-link"></a>
